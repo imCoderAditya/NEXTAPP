@@ -1,0 +1,124 @@
+.nav-bar {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 60px;
+  transition: background-color 0.3s ease;
+}
+.main-logo {
+  background-image: url("https://i.pinimg.com/originals/ef/5e/4b/ef5e4b4d024c66b42311e337ae8ab4cc.gif");
+  background-size: cover;
+  background-clip: text;
+  background-position: center;
+}
+.main-logo h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: transparent;
+}
+
+.button-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.ul-topnav {
+  display: flex;
+}
+
+.ul-topnav a {
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: 200ms;
+}
+
+.ul-topnav a:hover {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: wheat;
+  background-color: black;
+}
+.ul-topnav a:hover,
+.ul-topnav .active {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  color: wheat;
+  background-color: black;
+}
+
+/* scrolling time nav bar  */
+.nav-bar.scrolled {
+  background-color: white;
+  opacity: 0.4;
+  color: white;
+}
+
+.nav-bar.scrolled a:hover {
+  background-color: white;
+  color: #000;
+}
+
+.button-icon {
+  display: none;
+}
+.close-icon {
+  display: none;
+}
+.sideNav {
+  display: none;
+}
+
+/* Media queries for tablets and mobile devices */
+@media only screen and (min-width: 0px) and (max-width: 1000px) {
+  .button-icon {
+    display: block;
+  }
+  .ul-topnav {
+    display: none;
+  }
+  .nav-bar.open {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .nav-bar.open .ul-topnav {
+   display: inline-block;
+   margin-top: 40%;
+   text-align: center;
+   }
+  .nav-bar.open .ul-topnav a:hover{
+    background-color: transparent;
+    color: green;
+   }
+
+  .nav-bar.open .ul-topnav a.active{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  color: red;
+  background-color: transparent;
+  }
+  
+  
+}
